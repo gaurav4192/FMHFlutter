@@ -1,0 +1,2 @@
+C:/Users/srvga/flutterproject/fluttersocket/android/app/.cxx/RelWithDebInfo/452x2j4n/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/srvga/flutterproject/fluttersocket/android/app/.cxx/RelWithDebInfo/452x2j4n/armeabi-v7a/CMakeFiles/rebuild_cache.dir
