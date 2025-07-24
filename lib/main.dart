@@ -18,11 +18,17 @@ import 'package:fluttersocket/features.auth/presentation/bloc/auth_bloc.dart';
 import 'package:fluttersocket/features.auth/repositiories/auth_repository_impl.dart';
 import 'package:fluttersocket/features.auth/usecase/login_use_case.dart';
 import 'package:fluttersocket/login/login_page.dart';
+import 'package:fluttersocket/resources/socket_service.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 import 'chatfirst/chat_page.dart';
 
-void main() {
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final socketService =SocketService();
+  await socketService.initSocket();
   final authRepo=AuthRepositoryImp(authRemoteSource: AuthRemoteSource());
   final conversationsRepository=ConversationRepositoryImpl(conversationsRemoteDataSource: ConversationsRemoteDataSource());
   final messageRepository=MessageRepositoryImpl(messageRemoteDataSource: MessageRemoteDataSource());
