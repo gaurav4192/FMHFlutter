@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttersocket/chatfirst/chat_page.dart';
+import 'package:fluttersocket/features.auth/contacts/presentation/pages/contacts_page.dart';
 import 'package:fluttersocket/features.auth/conversation/presentation/bloc/conversation_bloc.dart';
 import 'package:fluttersocket/features.auth/conversation/presentation/bloc/conversation_state.dart';
 import 'package:fluttersocket/features.auth/conversation/presentation/bloc/conversations_event.dart';
@@ -120,7 +121,15 @@ class _ConversationsPageState extends State<ConversationsPage> {
           ),
         ))
       ],
-    )
+    ),
+      floatingActionButton: FloatingActionButton(
+          onPressed:(){
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>ContactPages()));
+          },
+          backgroundColor:Colors.white,
+          child: Icon(Icons.contacts),
+      ),
 
 
     );
